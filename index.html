@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ES">
+  <head>
+    <title>Podcast chanel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,500|IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/81f01f75ac.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#main"
+          ><img src="./src/images/logo.svg" alt="Logo de la barra de navegación"
+        /></a>
+        <input id="input-menu" type="checkbox" />
+        <label class="hamburguer-icon" for="input-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="items-nav">
+          <li><a href="#episodies-section">EPISODIOS</a></li>
+          <li><a href="#donde-venimos">NOSOTROS</a></li>
+          <li><a href="#galeria">ENTREVISTAS</a></li>
+          <li><a href="#seccion-nuestros-temas">TÓPICOS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="titles">Hello <del>world</del> pale blue dot</h1>
+      <p>
+        Un podcast que explora el mundo de la programación. Nuevos episodios,
+        todos los jueves cada 15 días.
+      </p>
+      <button>
+        CONOCÉ MÁS
+      </button>
+    </main>
+    <section id="episodies-section">
+      <div class="stripe"></div>
+      <h2 class="titles titles-one">
+        Episodios
+      </h2>
+      <div class="episodi-place">
+        <iframe
+          class="chapters"
+          src="https://open.spotify.com/embed-podcast/episode/449iUHs5wYJudrkmtvR9Yr"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="chapters"
+          src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="chapters"
+          src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="chapters"
+          src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
+    </section>
+    <section id="donde-venimos">
+      <img
+        src="./src/images/phone.png"
+        alt="Imagen de un celular intruducciendo el papel de las mujeres en la programación"
+      />
+      <div>
+        <h3 class="titles">
+          De dónde venimos
+        </h3>
+        <p class="article">
+          Our posturings, our imagined self-importance, the delusion that we
+          have some privileged position in the Universe, are challenged by this
+          point of pale light.
+          <br />
+          <br />
+          Our planet is a lonely speck in the great enveloping cosmic dark. In
+          our obscurity, in all this vastness, there is no hint that help will
+          come from elsewhere to save us from ourselves.
+        </p>
+      </div>
+    </section>
+    <section id="galeria">
+      <h4 class="titles titles-one">
+        Invitadas/os estelares
+      </h4>
+      <div class="layout-galeria">
+        <img
+          src="./src/images/computer-1950.png"
+          alt="Interacción con los primeros computadores en los años 50's."
+        />
+        <img
+          src="./src/images/Katie-Bouman.png"
+          alt="Katie Bouman junto a los contendeores del algoritmo CHIRP (El algoritmo usado para poder visualizar por primera vez en la historia una imagen de un hoyo negro."
+        />
+        <img
+          src="./src/images/computer-operators.png"
+          alt="Operadoras trabajando en grandes computadores antiguos"
+        />
+        <img
+          src="./src/images/susan-kare.png"
+          alt="Imagen de Susan Kare descansando en su oficina"
+        />
+        <img
+          src="./src/images/Margaret_Hamilton.png"
+          alt="Imagen de Margaret Hamilton junto con todo el código de software desarrollado para el alunizaje del Apollo 11"
+        />
+        <img
+          src="./src/images/grace-hopper.png"
+          alt="Imagen Grace Hopper, pionera en programación"
+        />
+      </div>
+    </section>
+    <section id="seccion-nuestros-temas">
+      <h5 class="titles">
+        Algunos de nuestros temas
+      </h5>
+      <div class="iconos-nuestros-temas">
+        <div>
+          <img src="./src/images/icon1.svg" alt="Icono trabajo remoto" />
+          <p>Trabajo remoto</p>
+        </div>
+        <div>
+          <img src="./src/images/icon2.svg" alt="Icono programacion" />
+          <p>Repensando la programación</p>
+        </div>
+        <div>
+          <img src="./src/images/icon3.svg" alt="Icono bases de codigo" />
+          <p>Bases del código</p>
+        </div>
+        <div>
+          <img src="./src/images/icon4.svg" alt="Icono seguridad informatica" />
+          <p>Seguridad informática</p>
+        </div>
+      </div>
+    </section>
+    <section class="ultimas-novedades">
+      <div class="stripe"></div>
+      <h6 class="titles">
+        ¿Querés las últimas novedades?
+      </h6>
+      <button>
+        ESCUCHÁ LOS EPISODIOS
+      </button>
+    </section>
+    <footer>
+      <p>
+        © 2019 - By ChristianDev12
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://open.spotify.com/show/1LVrJtPKsPseSgUtB7xYuM"
+            target="_blank"
+          >
+            <i class="fab fa-spotify"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.telegram.com" target="_blank">
+            <i class="fab fa-telegram"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

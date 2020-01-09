@@ -1,0 +1,65 @@
+@import './variables';
+
+/* SECCION CELULAR Y DONDE VINIMOS */
+
+#donde-venimos {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+  img {
+    width: $mobile-phone-width;
+    height: $mobile-phone-height;
+    position: relative;
+    top: -4rem;
+
+    @media screen and (min-width: 430px) and (max-width: 849px){
+      width: 25rem;
+      height: 35rem;
+      top: -3.8rem;
+    }
+  }
+
+  .titles{
+    margin-right: 4rem;
+  }
+
+  .article {
+    font-size: $mobile-article-size;
+    margin: 0.5rem 2rem 3.375rem 1rem;
+  }
+
+}
+
+
+
+@media screen and (min-width: 850px) {
+  #donde-venimos {
+    height: 36rem;
+    padding: 0 3rem 0 3rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    img {
+      width: $desktop-phone-width;
+      height: $desktop-phone-height;
+      top: -11rem;
+    }
+
+    div {
+      margin-left: 3.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .article {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        line-height: 1.5rem;
+        width: 29rem;
+      }
+    }
+  }
+}

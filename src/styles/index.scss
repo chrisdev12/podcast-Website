@@ -1,0 +1,49 @@
+@import './variables';
+
+*{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-style-mono;
+  background-color: white;
+
+
+/*TITULOS DE TODA LA PAGINA*/
+  h1,h2,h3,h4,h5,h6,.titles {
+    font-family: $font-style-sans;
+    font-size: $mobile-titles-size;
+    color: $black;
+    margin-left: 1rem;
+    font-weight: lighter;
+
+    @media screen and (min-width: 850px) {
+      font-size: $desktop-titles-size;
+    }
+  }
+   
+  //Propiedades comunes de los botones
+  button{
+
+    background: $button-color;
+    cursor: pointer;
+    border: none;
+    font-family: $font-style-mono;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+
+  @import './navbar'; 
+  @import './header';
+  @import './episodios';
+  @import './donde-venimos';
+  @import './galeria';
+  @import './temas';
+  @import './novedades';
+  @import './footer';
+}
+

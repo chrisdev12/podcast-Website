@@ -1,0 +1,494 @@
+@charset "UTF-8";
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  background-color: white;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .titles {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.25rem;
+  color: #060a24;
+  margin-left: 1rem;
+  font-weight: lighter;
+}
+@media screen and (min-width: 850px) {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  body .titles {
+    font-size: 3rem;
+  }
+}
+body button {
+  background: #00f3bb 100%;
+  cursor: pointer;
+  border: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 1rem;
+}
+body nav {
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 850px) {
+  body nav .hamburguer-icon {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    margin: 0.625rem 1rem 0rem 0rem;
+  }
+  body nav .hamburguer-icon span {
+    width: 1.7rem;
+    height: 0.2rem;
+    position: relative;
+    display: block;
+    margin-top: 0.18rem;
+    background-color: black;
+    border-radius: 3px;
+    transition: transform 1s ease-out;
+  }
+  body nav #input-menu {
+    display: none;
+    /*DESAPARECER INPUT, SOLO USAREMOS SU FUNCION CHECKED*/
+    /*ANIMACION BOTON DE HAMBURGUESA SE CONVIERTE EN  X*/
+    /*Cambiar altura a 40vh y poder visualizar  las opciones
+      del menu */
+  }
+  body nav #input-menu:checked ~ .hamburguer-icon span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+  }
+  body nav #input-menu:checked ~ .hamburguer-icon span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  body nav #input-menu:checked ~ .hamburguer-icon span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-3px, 1px);
+  }
+  body nav #input-menu:checked ~ .items-nav {
+    height: 40vh;
+  }
+  body nav #input-menu:checked ~ .items-nav li a {
+    opacity: 1;
+  }
+  body nav a img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.625rem 0 0.625rem 1rem;
+  }
+  body nav .items-nav {
+    list-style: none;
+    padding-left: 1rem;
+    width: 100%;
+    height: 0vh;
+    /* PROPIEDAD MODIFICADA AL PRESIONAR EL CHECKBOX */
+    overflow: hidden;
+    /* PERMITE QUE SE ESCONDA DADO QUE LA ALTURA ES 0 */
+    background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    transition-delay: 1s;
+    transition: height 1s ease-out;
+  }
+  body nav .items-nav li a {
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    text-decoration: none;
+  }
+  body nav .items-nav li a:hover {
+    border-bottom: white solid 2px;
+  }
+}
+@media screen and (min-width: 850px) {
+  body nav {
+    padding: 1.375rem 6.25rem 0 6.25rem;
+  }
+  body nav .hamburguer-icon span {
+    display: none;
+    /*ESCONDER MENU HAMBURGUESA*/
+  }
+  body nav #input-menu {
+    display: none;
+  }
+  body nav a img {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0 0 0.625rem 1rem;
+  }
+  body nav .items-nav {
+    padding-top: 0.25rem;
+  }
+  body nav .items-nav li {
+    display: inline-flex;
+    margin-left: 3rem;
+  }
+  body nav .items-nav li a {
+    color: #060a24;
+    text-decoration: none;
+  }
+}
+body main .titles {
+  margin: 4.5625rem 3.75rem 1rem 1rem;
+  animation: slide-in 10s 1;
+}
+body main .titles:after {
+  content: ".";
+  color: #0000ec;
+}
+body main p {
+  margin: 0 0.6rem 2.25rem 1rem;
+  font-size: 0.9rem;
+}
+body main button {
+  width: 18rem;
+  height: 3rem;
+  margin: 0 1rem 0 1rem;
+}
+body main button:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+@media screen and (max-width: 310px) {
+  body main div button {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 850px) {
+  body main {
+    padding: 12.5rem 0 0 12.5rem;
+  }
+  body main .titles {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 4rem;
+  }
+  body main p {
+    width: 39.25rem;
+    font-size: 0rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  body main p:before {
+    content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+    font-size: 1rem;
+  }
+  body main button {
+    margin: 3.5rem 0 0 0;
+    width: 14.125rem;
+    height: 3.5rem;
+  }
+}
+@keyframes slide-in {
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+body #episodies-section {
+  position: relative;
+  height: 75.21875rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  /*STRIPE PERMITE TENER EL BACKGROUND AZUL EN DIAGONAL */
+}
+body #episodies-section .stripe {
+  height: 97.1%;
+  width: 100%;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  position: absolute;
+  transform: skewY(-6deg);
+  transform-origin: top right;
+}
+body #episodies-section .titles {
+  padding-top: 4rem;
+  margin: 0 0 1.3125rem 1rem;
+  position: relative;
+  color: #ffffff;
+}
+body #episodies-section .episodi-place {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #episodies-section .episodi-place .chapters {
+  width: 18.625rem;
+  height: 14.5rem;
+  margin: 0 0.6875rem 0.6875rem 0.6875rem;
+  border-radius: 10px;
+  border: none;
+}
+@media screen and (min-width: 430px) and (max-width: 849px) {
+  body #episodies-section .titles {
+    padding-top: 5rem;
+  }
+  body #episodies-section .episodi-place .chapters {
+    width: 80%;
+    height: 14.5rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  body #episodies-section {
+    margin-top: 0.35rem;
+    height: 65.1625rem;
+  }
+  body #episodies-section .stripe {
+    height: 85%;
+  }
+  body #episodies-section .titles {
+    padding-top: 11.625rem;
+    margin: 0 0 0 12.5rem;
+  }
+  body #episodies-section .episodi-place {
+    margin: 1.625rem 6.25rem 14.5375rem 6.25rem;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-direction: row;
+    height: 50%;
+  }
+  body #episodies-section .episodi-place .chapters {
+    width: 45%;
+    height: 45%;
+    margin: 0 0 0 0;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body #episodies-section .episodi-place {
+    padding: 0 5rem 0 5rem;
+  }
+}
+body #donde-venimos {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body #donde-venimos img {
+  width: 18.75rem;
+  height: 28.6rem;
+  position: relative;
+  top: -4rem;
+}
+@media screen and (min-width: 430px) and (max-width: 849px) {
+  body #donde-venimos img {
+    width: 25rem;
+    height: 35rem;
+    top: -3.8rem;
+  }
+}
+body #donde-venimos .titles {
+  margin-right: 4rem;
+}
+body #donde-venimos .article {
+  font-size: 0.9rem;
+  margin: 0.5rem 2rem 3.375rem 1rem;
+}
+@media screen and (min-width: 850px) {
+  body #donde-venimos {
+    height: 36rem;
+    padding: 0 3rem 0 3rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  body #donde-venimos img {
+    width: 24.75rem;
+    height: 41.25rem;
+    top: -11rem;
+  }
+  body #donde-venimos div {
+    margin-left: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  body #donde-venimos div .article {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+    width: 29rem;
+  }
+}
+body #galeria .titles {
+  margin-bottom: 0.9rem;
+}
+body #galeria .layout-galeria {
+  display: flex;
+  flex-wrap: wrap;
+}
+body #galeria .layout-galeria img {
+  width: 100%;
+}
+@media screen and (min-width: 850px) {
+  body #galeria .layout-galeria img {
+    width: 33.3%;
+    height: 50%;
+  }
+  body #galeria .titles {
+    margin: 0 0 2.25rem 12.5rem;
+  }
+}
+body #seccion-nuestros-temas {
+  margin-top: 3rem;
+  text-align: center;
+}
+body #seccion-nuestros-temas .titles {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+body #seccion-nuestros-temas .iconos-nuestros-temas {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+body #seccion-nuestros-temas .iconos-nuestros-temas div {
+  width: 10.5rem;
+  margin-bottom: 3.25rem;
+}
+body #seccion-nuestros-temas .iconos-nuestros-temas div p {
+  margin-top: 0.8125rem;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 850px) {
+  body #seccion-nuestros-temas {
+    margin-top: 4rem;
+  }
+  body #seccion-nuestros-temas .titles {
+    margin: 0 0 3.5rem 12.5rem;
+  }
+  body #seccion-nuestros-temas .iconos-nuestros-temas {
+    justify-content: center;
+  }
+  body #seccion-nuestros-temas .iconos-nuestros-temas div {
+    width: 16.25rem;
+    margin-bottom: 2.125rem;
+  }
+}
+body .ultimas-novedades {
+  height: 21.4375rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .ultimas-novedades .stripe {
+  /*BACKGROUND AZUL EN DIAGONAL */
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  position: absolute;
+  transform-origin: 100%;
+  transform: skewY(-6deg);
+}
+body .ultimas-novedades .titles {
+  text-align: center;
+  margin-bottom: 2.25rem;
+  position: relative;
+  color: whitesmoke;
+}
+body .ultimas-novedades button {
+  width: 18rem;
+  height: 3rem;
+  position: relative;
+}
+body .ultimas-novedades button:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+@media screen and (min-width: 850px) {
+  body .ultimas-novedades {
+    height: 32.375rem;
+  }
+  body .ultimas-novedades .titles {
+    margin-left: 0;
+  }
+  body .ultimas-novedades button {
+    width: 21.5625rem;
+    height: 3.5rem;
+  }
+}
+@media screen and (max-width: 310px) {
+  body .ultimas-novedades {
+    margin-bottom: 3.5rem;
+  }
+  body .ultimas-novedades button {
+    width: 100%;
+    height: 25%;
+    margin: 1rem 1rem 0 1rem;
+  }
+}
+body footer {
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+body footer p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+body footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 2.8125rem 0 2.8125rem;
+}
+body footer ul li a {
+  color: #060a24;
+}
+body footer ul li a .fab {
+  font-size: 18px;
+}
+@media screen and (min-width: 850px) {
+  body footer {
+    padding: 0 2rem 0 2rem;
+    height: 3.9375rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  body footer ul {
+    width: 20%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
