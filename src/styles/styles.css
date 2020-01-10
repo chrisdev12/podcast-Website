@@ -112,7 +112,6 @@ body nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: left;
     transition-delay: 1s;
     transition: height 1s ease-out;
   }
